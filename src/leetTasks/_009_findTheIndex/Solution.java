@@ -1,0 +1,17 @@
+package leetTasks._009_findTheIndex;
+
+import java.util.Arrays;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        String haystack = "leetcode";
+        String needle = "leeto";
+        System.out.println(strStr(haystack, needle));
+    }
+
+    private static int strStr(String haystack, String needle) {
+        return  haystack.indexOf(needle);
+    }
+}
