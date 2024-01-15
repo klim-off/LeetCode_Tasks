@@ -11,13 +11,19 @@ public class Solution {
         System.out.println(preorderTraversal(root));
     }
 
-    public  static List<Integer> preorderTraversal(TreeNode32 root) {
+    public static List<Integer> preorderTraversal(TreeNode32 root) { //T.C:0(n) S.C:0(n)
+        List<Integer> list=new ArrayList<>();
+        dfs(root,list);
+        return list;
+    }
 
-        if (root == null){return ans;}
-        ans.add(root.val);
-        preorderTraversal(root.right);
-        preorderTraversal(root.left);
-        return ans;
+    static void  dfs(TreeNode32 root, List<Integer> list)
+    {
+        if(root==null)
+            return;
+        list.add(root.val);
+        dfs(root.left,list);
+        dfs(root.right,list);
     }
 
 }
