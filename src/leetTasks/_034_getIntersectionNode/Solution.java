@@ -9,19 +9,21 @@ public class Solution {
         ListNode34 headB = new ListNode34(1);
         System.out.println(getIntersectionNode(headA, headB));
     }
+
     public static ListNode34 getIntersectionNode(ListNode34 headA, ListNode34 headB) {
         //boundary check
-        if(headA == null || headB == null) return null;
+        if (headA == null || headB == null) return null;
 
         ListNode34 a = headA;
         ListNode34 b = headB;
 
         //if a & b have different len, then we will stop the loop after second iteration
-        while( a != b){
+        while (a != b) {
             //for the end of first iteration, we just reset the pointer to the head of another linkedlist
-            a = a == null? headB : a.next;
-            b = b == null? headA : b.next;
+            a = a == null ? headB : a.next;
+            b = b == null ? headA : b.next;
         }
 
         return a;
+    }
 }
