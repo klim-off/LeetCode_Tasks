@@ -23,8 +23,7 @@ public class Solutuon {
             if (indexes[i] == -1) {
                 return false;
             } else {
-                // System.out.println(builderT.charAt(indexes[i]));
-                builderT.deleteCharAt(indexes[i]);
+                 builderT.deleteCharAt(indexes[i]);
                 if (i > 0) {
                     if ((indexes[i] - indexes[i - 1]) < 0) {
                         return isSubsequence(s, builderT.toString());

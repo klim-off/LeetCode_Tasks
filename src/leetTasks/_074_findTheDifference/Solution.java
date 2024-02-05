@@ -9,6 +9,7 @@ public class Solution {
         String s = "abcd";
         String t = "abcde";
         System.out.println(findTheDifference(s,t));
+
     }
 
     public static char findTheDifference(String s, String t) {
