@@ -20,7 +20,6 @@ public class Solution {
                 numList.add(nums[i]);
             }
         }
-
         return numList.size()>2?numList.get(numList.size()-3): numList.get(numList.size()-1);
     }
 }
