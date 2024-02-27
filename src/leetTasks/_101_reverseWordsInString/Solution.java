@@ -14,7 +14,7 @@ public class Solution {
        StringBuilder result = new StringBuilder();
         for (int i = 0; i < arrayS.length; i++) {
             arrayS[i] = new StringBuilder(arrayS[i]).reverse().toString();
-            result = result.append(arrayS[i]+" ");
+            result.append(arrayS[i]+" ");
         }
       return  result.deleteCharAt(result.length()-1).toString();
     }
