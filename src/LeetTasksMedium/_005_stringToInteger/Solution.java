@@ -19,19 +19,20 @@ public class Solution {
     }
     public static int myAtoi(String s) {
         s=s.trim();
+        int sLength = s.length();
 
-        if (s.length() == 0) return 0;
-        if (s.length() == 1 && !Character.isDigit(s.charAt(0) )) return 0;
+        if (sLength == 0) return 0;
+        if (sLength == 1 && !Character.isDigit(s.charAt(0) )) return 0;
         if (!Character.isDigit(s.charAt(0)) && s.charAt(0) != '-' &&  s.charAt(0) != '+')  return 0;
         if (s.charAt(0) == '-' && !Character.isDigit(s.charAt(1)))  return 0;
         if (s.charAt(0) == '+' && !Character.isDigit(s.charAt(1)))  return 0;
 
         boolean isDigit = false;
         int startDigit = 0;
-        int endDigit = s.length();
+        int endDigit = sLength;
         int result = 0;
 
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < sLength; i++) {
             if (isDigit){
                 if (Character.isDigit(s.charAt(i))) {continue;}
                 endDigit = i;
