@@ -3,6 +3,10 @@ package leetTasks._118_findLengthOfLCIS;
 /*
 Given an unsorted array of integers nums, return the length of the longest continuous increasing subsequence (i.e. subarray).
  The subsequence must be strictly increasing.
+Example:
+Input: nums = [1,3,5,4,7]
+Output: 3
+Explanation: The longest continuous increasing subsequence is [1,3,5] with length 3.
  */
 public class Solution {
 
